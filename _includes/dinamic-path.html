@@ -10,4 +10,14 @@
   {%  assign dinamic_path = '../../../' %}
 {% elsif depth == 5 %}
   {% assign dinamic_path = '../../../../' %}
+{% elsif depth == 6 %}
+  {% assign dinamic_path = '../../../../../' %}
+{% elsif depth == 7 %}
+  {% assign dinamic_path = '../../../../../../' %}
+{% elsif depth == 8 %}
+  {% assign dinamic_path = '../../../../../../../' %}
+{% elsif depth == 9 %}
+  {% assign dinamic_path = '../../../../../../../../' %}
+{% elsif depth == 10 %}
+  {% assign dinamic_path = '../../../../../../../../../' %}
 {% endif %}
