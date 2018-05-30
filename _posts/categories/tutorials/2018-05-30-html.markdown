@@ -3,6 +3,7 @@ title: Start Html
 date: 2018-05-30 18:51:00 Z
 categories:
 - html
+- tutorial
 layout: categories_layout
 ---
 
