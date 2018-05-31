@@ -1,19 +1,18 @@
 
 {% assign tags = site.tags[page.tag] %}
+<div class="card-columns">
 {% for post in tags %}
 <div class="card text-center">
   <div class="card-header">
-    Featured
+    {{ post.title }}
   </div>
   <div class="card-body">
-    <h5 class="card-title">{{ post.title }}</h5>
     <p class="card-text">{{ post.desciption }}</p>
     <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-primary">See More</a>
   </div>
   <div class="card-footer text-muted">
-    {{ post.date }}
+    {{ post.date | timeago }}
   </div>
 </div>
-
-
 {% endfor %}
+</div>
