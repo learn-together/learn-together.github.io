@@ -1,22 +1,20 @@
 ---
 layout: categories_layout
 permalink: /categories/
+title: All Tutorials
+tag: ""
 ---
 
-<div id="archives">
+{% assign tags = site.tags %}
 {% for category in site.tags %}
-  <div class="archive-group">
-    {% capture category_name %}{{ category | first }}{% endcapture %}
-    <div id="#{{ category_name | slugize }}"></div>
-    <p></p>
-
-    <h3 class="category-head">{{ category_name }}</h3>
-    <a name="{{ category_name | slugize }}"></a>
-    {% for post in site.tags[category_name] %}
-    <article class="archive-item">
-      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
-    </article>
-    {% endfor %}
+  {% capture category_name %}{{ category | first }}{% endcapture %}
+  {% assign cat_details = site.data.categories[category_name] %}
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{ cat_details.image }}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ category_name }}</h5>
+      <p class="card-text">{{ cat_details.desciption }}</p>
+      <a href="/category/{{ category_name | slugize }}"> {{ category_name }} </a>
+    </div>
   </div>
 {% endfor %}
-</div>

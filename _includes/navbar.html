@@ -16,9 +16,8 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="nav-link" href="{{dinamic_path}}categories">Categories</a>
           {% for category in site.tags %}
-          {{ category | inspect }}
-          {% capture category_name %}{{ category | first }}{% endcapture %}
-            <a class="nav-link" href="{{ dinamic_path }}{{ category.url }}">{{ category_name }}</a>
+            {% capture category_name %}{{ category | first }}{% endcapture %}
+            <a class="nav-link" href="/category/{{ category_name | slugize }}"> {{ category_name | capitalize}} </a>
           {% endfor %}
         </div>
       </li>
