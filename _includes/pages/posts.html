@@ -1,7 +1,19 @@
 
 {% assign tags = site.tags[page.tag] %}
 {% for post in tags %}
-<article class="archive-item">
-  <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
-</article>
+<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ post.title }}</h5>
+    <p class="card-text">{{ post.desciption }}</p>
+    <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-primary">See More</a>
+  </div>
+  <div class="card-footer text-muted">
+    {{ post.date }}
+  </div>
+</div>
+
+
 {% endfor %}

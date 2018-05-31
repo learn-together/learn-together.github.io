@@ -6,6 +6,7 @@ tag: ""
 ---
 
 {% assign tags = site.tags %}
+<div class="card-columns">
 {% for category in site.tags %}
   {% capture category_name %}{{ category | first }}{% endcapture %}
   {% assign cat_details = site.data.categories[category_name] %}
@@ -18,3 +19,4 @@ tag: ""
     </div>
   </div>
 {% endfor %}
+</div>
