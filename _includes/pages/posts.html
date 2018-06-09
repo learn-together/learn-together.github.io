@@ -3,9 +3,6 @@
 <div class="card-columns">
 {% for post in tags %}
 <div class="card text-center">
-  <div class="card-header">
-    {{ post.title }}
-  </div>
   <div class="card-body">
     <p class="card-text">{{ post.desciption }}</p>
     <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-primary">See More</a>

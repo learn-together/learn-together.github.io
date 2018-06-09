@@ -4,3 +4,6 @@ html:
 github:
   image: ../assets/img/github-tutorial.jpg
   desciption: prima descriere github
+web:
+  image: ../assets/img/web-tutorial.jpg
+  desciption: Learn Web Design Step By Step
