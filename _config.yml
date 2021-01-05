@@ -20,7 +20,7 @@ twitter_username: jekyllrb
 github_username: jekyll
 markdown: kramdown
 plugins:
-- jekyll-feed
+  - jekyll-postcss
 sass:
   load_paths:
   - _sass

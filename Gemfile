@@ -8,10 +8,8 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "3.5.2"
-
-gem 'bootstrap-sass'
-gem 'jekyll-bootstrap-sass'
+gem "jekyll", "~> 4.1.1"
+gem 'jekyll-postcss'
 
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -20,8 +18,8 @@ gem 'jekyll-bootstrap-sass'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-   gem "jekyll-feed", "~> 0.6"
-   gem 'jekyll-admin'
+   gem 'jekyll-feed', '~> 0.15.1'
+   gem 'jekyll-admin', '~> 0.11.0'
    gem 'jekyll-timeago'
 
 end
